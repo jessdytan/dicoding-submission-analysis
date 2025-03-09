@@ -18,7 +18,7 @@ pipenv shell
 pip install -r requirements.txt
 ```
 
-## Run steamlit app
+## Run streamlit app
 
 ```
 cd dashboard
