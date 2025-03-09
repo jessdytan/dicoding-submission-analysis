@@ -4,11 +4,19 @@ import numpy as np
 import streamlit as st 
 import seaborn as sns
 import plotly.express as px
+import sys
+from pathlib import Path
+
+dir = Path(__file__).absolute()
+sys.path.append(str(dir.parent.parent))
+
+# load file
+path_to_file = 'main_data.csv'
 
 # Load datasets
 @st.cache_data
 def load_data():
-    data = pd.read_csv("main_data.csv")
+    data = pd.read_csv(path_to_file)
     return data
 
 df = load_data()
