@@ -5,12 +5,10 @@ import streamlit as st
 import seaborn as sns
 import plotly.express as px
 
-data_url = "https://raw.githubusercontent.com/jessdytan/dicoding-submission-analysis/refs/heads/main/dashboard/main_data.csv"
-
 # Load datasets
 @st.cache_data
 def load_data():
-    data = pd.read_csv(data_url)
+    data = pd.read_csv('dashboard/main_data.csv')
     return data
 
 df = load_data()
